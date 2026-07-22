@@ -1,0 +1,21 @@
+namespace: employee-portal
+
+frontend:
+  replicaCount: 1
+
+  image:
+    repository: us-central1-docker.pkg.dev/project-sre-502208/demo/employee-frontend
+    tag: v1
+
+  service:
+    port: 80
+
+backend:
+  replicaCount: 1
+
+  image:
+    repository: us-central1-docker.pkg.dev/project-sre-502208/demo/employee-backend
+    tag: v1
+
+  service:
+    port: 3000
