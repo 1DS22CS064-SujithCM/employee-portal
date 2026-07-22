@@ -27,3 +27,16 @@ spec:
 
         ports:
         - containerPort: 3000
+        
+        env:
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: backend-secret
+                key: DB_USERNAME
+
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: backend-secret
+                key: DB_PASSWORD
